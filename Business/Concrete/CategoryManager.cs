@@ -10,7 +10,7 @@ namespace Business.Concrete
     public class CategoryManager : ICategoryService
     {
         private ICategoryDal _categoryDal;
-
+        // DI with ctor.
         public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;

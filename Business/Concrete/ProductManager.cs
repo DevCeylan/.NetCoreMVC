@@ -10,7 +10,7 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
-
+        // DI with ctor.
         public ProductManager(IProductDal productDal)
         {
             _productDal = productDal;
