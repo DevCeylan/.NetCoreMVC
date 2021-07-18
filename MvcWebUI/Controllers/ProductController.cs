@@ -20,11 +20,13 @@ namespace MvcWebUI.Controllers
         // buraya kadar controller da DI ile ilgili işlem servisine bağladık
 
         // şimdi de sayfada view çağırma; bunun için model klasörünün altında bir ..ViewModel yazmak gerek
-        public IActionResult Index()
+        public IActionResult Index(int category)
         {
             var model = new ProductListViewModel
             {
-                Products = _productService.GetAll()
+                Products = category > 0 ?
+                            _productService.GetByCategory(category) :
+                            _productService.GetAll()
             };
             return View(model);
         }
