@@ -20,7 +20,8 @@ namespace MvcWebUI.ViewComponents
         {
             var model = new CategoryListViewModel
             {
-                Categories = _categoryService.GetAll()
+                Categories = _categoryService.GetAll(),
+                CurrentCategory = Convert.ToInt32(HttpContext.Request.Query["category"])
             };
             return View(model);
         }

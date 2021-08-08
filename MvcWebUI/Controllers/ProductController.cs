@@ -31,6 +31,6 @@ namespace MvcWebUI.Controllers
             return View(model);
         }
         // model oluşturuldu, DI ile gelen servis içerisindeki methodlar ile içeriği atandı ve View a gönderildi.
-        // şimdi View ın içerisinde bakılaak data hazır, AMA format belli değil, git şimdi onu yaz. (Razor syntax akar)
+        // şimdi View ın içerisinde bakılacak data hazır, AMA format belli değil, git şimdi onu yaz. (Razor syntax akar)
     }
 }
